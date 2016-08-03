@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<title>Exemplo 1</title>
+		<script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+		<script type="text/javascript">	
+		
+		$(document).ready(function () {
+			$.getJSON('estados-cidades.json', function (data) {
+				var itens = '<option name="">- Selecione um estado -</option>';
+
+				$.each(data, function (key, val) {
+					itens += '<option value="' + val.nome + '">' + val.nome + '</option>';
+				});
+
+				$("#estado").html(itens);				
+				$("#estado").change(function () {				
+			
+					var cidade = '';
+					var str = "";					
+					
+					$("#estado option:selected").each(function () {
+						str += $(this).text();
+					});
+					
+					$.each(data, function (key, val) {
+						if(val.nome == str) {							
+							$.each(val.cidades, function (key_city, val_city) {
+							cidade += '<option value="' + val_city + '">' + val_city + '</option>';
+							});							
+						}
+					});
+					$("#cidade").html(cidade);
+				}).change();		
+			});
+		});
+		
+		</script>
+	</head>
+	<body>
+		<h1>Formulário de Cadastro</h1>
+		<label for="estado">Estado</label>
+		<select id="estado"></select>
+		<label for="cidade">Cidade</label>
+		<select id="cidade"></select>
+	</body>
+</html>
