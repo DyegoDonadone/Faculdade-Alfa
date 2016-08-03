@@ -1,0 +1,199 @@
+
+
+/* main Styles */
+
+html { 
+  box-sizing: border-box;
+  background-color: #555;
+ }
+
+body {
+  font-family: verdana, sans-serif;
+  font-size: 12px;
+  margin: 0;
+}
+
+a { text-decoration: none; }
+
+/* Navigation Styles */
+
+nav { background: #2ba0db;}
+
+nav ul {
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+nav ul li a {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  padding: 15px 14px;
+  transition: 0.3s linear;
+}
+
+nav ul li:hover { background: #126d9b; }
+
+nav ul li ul {
+  border-bottom: 5px solid #2ba0db;
+  display: none;
+  position: absolute;
+  width: 250px;
+}
+
+nav ul li ul li {
+  border-top: 1px solid #444;
+  display: block;
+}
+
+nav ul li ul li:first-child { border-top: none; }
+
+nav ul li ul li a {
+  background: #373737;
+  display: block;
+  padding: 10px 14px;
+}
+
+nav ul li ul li a:hover { background: #126d9b; }
+
+nav .fa.fa-angle-down { margin-left: 6px;}
+
+.slider {
+    width: 80%;
+    margin: 15px auto;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+    display: none;
+}
+
+#toTop { 
+  background: none repeat scroll 0 0 #f7f7f7; 
+  border: 1px solid #ccc; 
+  bottom: 10px; 
+  color: #333; 
+  cursor: pointer; 
+  display: none; 
+  font-family: verdana; 
+  font-size: 11px; 
+  padding: 1px; 
+  position: fixed; 
+  right: 10px; 
+  text-align: center; 
+  width: 100px;
+}
+
+#quemSomos{
+  width: 80%;
+  left: 10%;
+  margin-top:67px;
+  position: relative;
+  border-radius: 2px;
+  border: 2px solid #2ba0db;
+}
+
+.imgLogo{
+  margin: 30px;
+}
+
+h1{
+  font-size: 18px;
+  font-family: verdana,arial;
+  color: #fff;
+  text-align: center;
+}
+
+p{
+  font-size: 12px;
+  font-family: verdana,arial;
+  color: #fff;
+  text-align: justify;
+}
+#produtos{
+  width: 80%;
+  left: 10%;
+  margin-top:50px;
+  padding-bottom: 50px;
+  position: relative;
+  border-radius: 2px;
+  border: 2px solid #2ba0db;
+}
+#pereciveis{
+  width: 100%;
+  margin-top:50px;
+  position: relative;
+  text-align: center;
+}
+.produto{
+  width: 20%;
+  margin-left:1%;
+  border-radius: 2px;
+  border: 2px solid #2ba0db;
+}
+#naopereciveis{
+  width: 100%;
+  margin-top:50px;
+  position: relative;
+  text-align: center;
+}
+.rodape{
+  width: 100%;
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+  font-family: verdana,arial;
+  color: #fff;
+  margin-top: 10px;
+}
+.rodape p{
+  margin-top:50px;
+  text-align: center;
+}
+#segura_campos{
+  width: 500px;
+  color: #fff;
+  position: relative;
+  left:50%;
+  transform: translateX(-50%);
+}
+h3{
+  color: #fff;
+  text-align: center;
+  font-family: verdana,arial;
+}
+.labelnome{
+  width: 116px;
+  height: auto;
+  font-family: verdana,arial;
+  color: #fff;
+  float: left;
+  font-size: 12px;
+}
+.labelinput{
+  width: 350px;
+  height: auto;
+  font-family: verdana,arial;
+  color: #fff;
+  float: left;
+}
+.labelinput input{
+  margin-right: 5px;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+	<link rel="stylesheet" href="js/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./slick/slick.css">
+  	<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+  	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+  	<script src="js/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
+  	<link rel="stylesheet" type="text/css" href="js/jquery.modal.css">
+  	<link href="lightbox2-master/src/css/lightbox.css" rel="stylesheet">
+  	<script src="lightbox2-master/src/js/lightbox.js"></script>
+  	<script src="sweetalert/dist/sweetalert.min.js" type="text/javascript" charset="utf-8"></script>
+  	<link rel="stylesheet" type="text/css" href="sweetalert/dist/sweetalert.css">
+
+	<meta charset="utf-8">
+		<title>Trabalho 01</title>
+		<script>
+		    lightbox.option({
+		      'resizeDuration': 200,
+		      'wrapAround': true
+		    });
+		    $("#ex1").modal({
+			  fadeDuration: 100
+			});
+			$(document).ready(function(){
+			    $("#botao").click(function(){
+				     var cont = 0;
+				     $("#form input").each(function(){
+				         if($(this).val() == "")
+				             {
+				                 $(this).css({"border" : "1px solid #F00", "padding": "2px"});
+				                 cont++;
+				             }
+				        });
+				     if(cont == 0)
+				         {
+				            swal("Mensagem enviada com sucesso!");
+				            $("#form").submit();
+				         }
+				    });
+				});
+		</script>
+	</head>
+	<body>
+		<div id="pagina">
+			<div class="container">
+				<img src="img/logo.png" class="imgLogo">
+			</div>
+			<div id="ex1" style="display:none; color:#000;">
+				<h1 style="color:#000;">Contato</h1>
+    			<form id="form" method="post" action="#">
+    				<label>Nome: </label>
+					<label><input type="text" name="nome" placeholder="Nome" required></label><br><br>
+					<label>E-mail:</label>
+					<label><input type="text" name="email" placeholder="Email" required></label><br><br>
+					<label>Mensagem:<br><textarea type="text" name="mens" required></textarea></label><br>
+    				<input type="button" id="botao" name="enviar" value="ENVIAR">
+    			</form>
+  			</div>
+			<nav>
+			    <ul>
+			      <li><a href="index.html">Página inicial</a></li>
+			      <li><a href="#produtos">Produtos</a>
+			        <ul>
+			          <li><a href="#pereciveis">Perecíveis</a></li>
+			          <li><a href="#naopereciveis">Não-perecíveis</a></li>
+			        </ul>
+			      </li>
+			      <li><a href="cadastro.html">Cadastro</a></li>
+			      <li><a href="#quemSomos">Quem somos</a></li>
+			      <li><a href="#ex1" rel="modal:open">Contato</a></li>
+			    </ul>
+			</nav>
+			<div>
+				<section class="autoplay slider">
+				    <div><img src="img/01.jpg"></div>
+				    <div><img src="img/02.jpg"></div>
+				    <div><img src="img/03.jpg"></div>
+			  </section>
+			</div>
+			<div id="quemSomos">
+				<h1>Quem Somos - Nossa história<h1>
+
+				<p class="paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus est et facilisis consectetur. Integer eu euismod tellus. Donec at lectus non urna efficitur facilisis vel eu ligula. Ut in mollis erat. Phasellus facilisis consectetur magna non accumsan. Sed sollicitudin a odio eu cursus. Duis odio ipsum, interdum at rutrum non, eleifend at augue. Pellentesque tempor ipsum quis dignissim mollis.</p>
+
+				<p class="paragrafo">Cras mattis nisi sit amet leo fringilla blandit. In quis metus id magna iaculis euismod. In gravida dui bibendum quam sollicitudin euismod. Ut vehicula porta porttitor. Ut pretium eros sed rutrum imperdiet. Vivamus justo arcu, fringilla id eros id, tempus placerat dui. Nunc vel nulla non orci efficitur pulvinar. In pretium, urna sollicitudin tincidunt vestibulum, ex est ullamcorper velit, ac semper purus purus sit amet metus. Cras egestas ac erat a rutrum. Fusce ac tortor id quam luctus finibus eget id dui. Nunc nulla ante, finibus maximus ultricies ac, placerat porta velit. Maecenas auctor et purus sed finibus. Phasellus et ullamcorper est. Maecenas augue justo, dictum vel nisl ac, eleifend tincidunt est. Nulla cursus nulla massa, nec posuere tellus pulvinar quis. Donec at lorem vitae augue tempor lobortis sed in lectus.</p>
+
+				<p class="paragrafo">In hac habitasse platea dictumst. Aenean efficitur rhoncus ante sed maximus. Aliquam feugiat tempus ipsum. Ut nunc nulla, ornare ac justo non, tempor ultrices libero. Fusce velit augue, maximus eu dui sed, venenatis dictum ligula. Suspendisse venenatis nisl vel porttitor hendrerit. Vestibulum vitae efficitur mauris. Phasellus feugiat ante in est consequat, at suscipit libero tincidunt. Donec pellentesque pellentesque diam dapibus tincidunt. Fusce eget imperdiet urna. Maecenas non sem eu lacus mattis ornare. Vestibulum id ex cursus, suscipit enim et, maximus justo. Nullam in ante scelerisque, aliquam urna a, dictum odio. Curabitur suscipit neque quis odio pharetra tristique. Vestibulum a dignissim elit.</p>
+
+				<p class="paragrafo">Nunc tristique interdum risus. Cras neque est, ornare ut rutrum eu, pulvinar eget dolor. Etiam lectus purus, congue non aliquam eget, suscipit non ligula. Suspendisse potenti. Aliquam ultrices, felis a vulputate posuere, est libero pharetra dolor, at dapibus metus ante quis metus. In tincidunt venenatis nisl, id convallis risus placerat at. Phasellus eget leo sed tortor hendrerit venenatis a sed mauris.</p>
+
+				<p class="paragrafo">Vivamus at nisl vel quam convallis sagittis ut at dui. Aliquam porta sapien lectus, in pharetra nunc sollicitudin nec. Morbi sed sapien vel mauris viverra venenatis nec quis risus. Ut sodales commodo massa, sit amet posuere mauris lacinia non. Duis porttitor cursus felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at elit eget enim viverra tristique et tristique lacus. In eget nunc ut nulla tincidunt semper. Etiam ullamcorper ac ex finibus malesuada. Vivamus a orci congue, convallis erat et, scelerisque lectus. Duis lacinia mi metus, et scelerisque lorem dapibus sit amet. Mauris vel dolor nec ligula mollis eleifend non et nulla. Nunc sapien nisl, posuere nec lorem non, faucibus tincidunt nibh. Pellentesque ex odio, posuere quis urna vitae, gravida gravida nisi.</p>
+			</div>
+			<div id="produtos"><h1>Produtos</h1>
+				<div id="pereciveis"><h1>Perecíveis</h1>
+      				<a class="example-image-link" href="img/p1.png" data-lightbox="example-set" data-title="Produtos Perecíveis"><img class="example-image produto" src="img/p1.png" alt=""/></a>
+      				<a class="example-image-link" href="img/p2.png" data-lightbox="example-set" data-title="Produtos Perecíveis"><img class="example-image produto" src="img/p2.png" alt="" /></a>
+      				<a class="example-image-link" href="img/p3.png" data-lightbox="example-set" data-title="Produtos Perecíveis"><img class="example-image produto" src="img/p3.png" alt="" /></a>
+      				<a class="example-image-link" href="img/p4.png" data-lightbox="example-set" data-title="Produtos Perecíveis"><img class="example-image produto" src="img/p4.png" alt="" /></a>
+				</div>
+				<div id="naopereciveis"><h1>Não Perecíveis</h1>
+					<a class="example-image-link" href="img/p5.png" data-lightbox="example-set" data-title="Produtos Não Perecíveis"><img class="example-image produto" src="img/p5.png" alt=""/></a>
+      				<a class="example-image-link" href="img/p6.png" data-lightbox="example-set" data-title="Produtos Não Perecíveis"><img class="example-image produto" src="img/p6.png" alt="" /></a>
+      				<a class="example-image-link" href="img/p7.png" data-lightbox="example-set" data-title="Produtos Não Perecíveis"><img class="example-image produto" src="img/p7.png" alt="" /></a>
+      				<a class="example-image-link" href="img/p8.png" data-lightbox="example-set" data-title="Produtos Não Perecíveis"><img class="example-image produto" src="img/p8.png" alt="" /></a>
+				</div>
+				<div class="rodape">
+					<p>&copy; Dyego B. S. Donadone - Trabalho Modulo Jquery</p>
+				</div>
+			</div>
+			<div id="toTop" style="display: none;">^ Voltar topo</div>
+		</div>
+	<script src="lightbox2-master/dist/js/lightbox-plus-jquery.min.js"></script>
+
+	<script>
+	$('nav li').hover(
+	  function() {
+		  $('ul', this).stop().slideDown(200);
+	  },
+		function() {
+	    $('ul', this).stop().slideUp(200);
+	  }
+	);
+	</script>
+	<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+  	<script type="text/javascript">
+    $(document).on('ready', function() {
+	      $('.autoplay').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  autoplay: true,
+		  autoplaySpeed: 2500,
+		});
+    });
+
+  $(function() { 
+  	$(window).scroll(function() { 
+  		if($(this).scrollTop() != 0) { 
+  			$('#toTop').fadeIn();   
+  		} else { 
+  			$('#toTop').fadeOut(); } 
+  		}); $('#toTop').click(function() { 
+  			$('body,html').animate({scrollTop:0},1200); 
+  		});
+	});
+	</script>
+	
+	</body>
+</html>
